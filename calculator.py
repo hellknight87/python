@@ -1,3 +1,6 @@
+#This is the first program that I created fron the udemy tutorial
+#Just a basic calculator, nothing more. Still learning the stuff.
+
 import re
 
 print("Our magical calculator")
