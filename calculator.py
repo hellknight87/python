@@ -1,6 +1,8 @@
-#This is the first program that I created fron the udemy tutorial
-#Just a basic calculator, nothing more. Still learning the stuff.
-
+'''
+    Progam: Magical calculator
+    Author: Tarun Brari
+    License: GPLv3
+'''
 import re
 
 print("Our magical calculator")
@@ -13,8 +15,9 @@ def performMath():
     global run
     global previous
     equation = ""
-    if previous == 0 :
 
+    #If there has been a previous calculation, use that result as the prompt
+    if previous == 0 :
         equation = input("Enter equation:")
     else:
         equation = input(str(previous))
