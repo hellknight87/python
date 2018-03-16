@@ -1,14 +1,14 @@
 import random
 
 class bcolors:
-    HEADER = '\033|95m'
-    OKBLUE = '\033|94m'
-    OKGREEN = '\033|92m'
-    WARNING = '\033|93m'
-    FAIL = '\033|91m'
-    ENDC = '\033|0m'
-    BOLD = '\033|1m'
-    UNDERLINE = '\033|4m'
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
 
 
 class Person:
@@ -39,13 +39,13 @@ class Person:
 
     def get_hp(self):
         return self.hp
-    
+
     def get_max_hp(self):
         return self.hp
 
     def get_mp(self):
         return self.mp
-    
+
     def get_max_mp(self):
         return self.maxmp
 
@@ -58,7 +58,7 @@ class Person:
     def get_spell_mp_cost(self, i):
         return self.magic[i]["cost"]
 
-    
+
 
     def choose_action(self):
         i = 1
@@ -73,4 +73,3 @@ class Person:
         for spell in self.magic:
             print(str(i) + ":", spell["name"], "(cost:", str(spell["mp"]) + ")")
             i += 1
-
