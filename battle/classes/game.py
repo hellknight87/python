@@ -1,5 +1,6 @@
 import random
 from .magic import Spell
+import pprint
 
 class bcolors:
     HEADER = '\033[95m'
@@ -64,6 +65,8 @@ class Person:
 
     def choose_magic(self):
         i = 1
+        pprint(self.magic)
+        return False
         print("Magic")
         for spell in self.magic:
             print(str(i) + ":", spell.name, "(cost:", str(spell["cost"]) + ")")
