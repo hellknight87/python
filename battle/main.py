@@ -1,5 +1,5 @@
 from classes.game import Person, bcolors
-form clases.magic import Spell
+from classes.magic import Spell
 
 # Create Black Magic
 fire = Spell("Fire", 10, 100, "black")
