@@ -2,6 +2,7 @@ import random
 from .magic import Spell
 import pprint
 
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -28,7 +29,6 @@ class Person:
     def generate_damage(self):
         return random.randrange(self.atkl, self.atkh)
 
-    
     def take_damage(self, dmg):
         self.hp -= dmg
         if self.hp < 0:
@@ -55,7 +55,6 @@ class Person:
     def reduce_mp(self, cost):
         self.mp -= cost
 
- 
     def choose_action(self):
         i = 1
         print("Actions")
@@ -65,7 +64,7 @@ class Person:
 
     def choose_magic(self):
         i = 1
-        
+
         for spell in self.magic:
             print(str(i) + ":", spell.name, "(cost:", str(spell.cost) + ")")
             i += 1

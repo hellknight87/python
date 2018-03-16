@@ -35,12 +35,11 @@ while running:
         player.choose_magic()
         magic_choice = int(input("Choose magic:")) - 1
 
-
         spell = player.magic[magic_choice]
         magic_dmg = spell.generate_damage()
-        
+
         current_mp = player.get_mp()
-        
+
         if spell.cost > current_mp:
             print(bcolors.FAIL + "\nNot enough MP\n" + bcolors.ENDC)
             continue
@@ -48,14 +47,13 @@ while running:
 
         if spell.type == "white":
             player.heal(magic_dmg)
-            print(bcolors.OKBLUE + "\n" + spell.name + " heals for", str(magic_dmg), "HP." + bcolors.ENDC )
+            print(bcolors.OKBLUE + "\n" + spell.name + " heals for", str(magic_dmg), "HP." + bcolors.ENDC)
         elif spell.type == "black":
             enemy.take_damage(magic_dmg)
             print(bcolors.OKBLUE + "\n" + spell.name + " deals", str(magic_dmg), "points of damage" + bcolors.ENDC)
 
-
     enemy_choice = 1
-    
+
     enemy_dmg = enemy.generate_damage()
     player.take_damage(enemy_dmg)
     print("Enemy attacks for", enemy_dmg)
@@ -72,5 +70,3 @@ while running:
     elif player.get_hp() == 0:
         print(bcolors.FAIL + "Your enemy has defeated you!" + bcolors.ENDC)
         running = False
-
-    
