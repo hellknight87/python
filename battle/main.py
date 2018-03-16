@@ -9,7 +9,6 @@ meteor = Spell("Meteor", 20, 200, "black")
 quake = Spell("Quake", 14, 140, "black")
 
 # Create White Magic
-
 cure = Spell("Cure", 12, 120, "white")
 cura = Spell("Cura", 18, 200, "white")
 
