@@ -3,5 +3,5 @@ int main()
 {
     int i;
     for(i=1;i<=10;i++)
-    printf("%d Hello Visual Studio Code\n")
+    printf("%d Hello Visual Studio Code\n");
 }
