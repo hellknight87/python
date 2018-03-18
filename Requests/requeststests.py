@@ -1,9 +1,11 @@
 import requests
 
-r = requests.get("http://google.com")
-print("Status :", r.status_code)
+params = {"q": "pizza"}
+r = requests.get("http://www.bing.com/search", params=params)
+print("Status:", r.status_code)
 
-print(r.text)
+print(r.url)
 
 f = open("./page.html", "w+")
 f.write(r.text)
+
