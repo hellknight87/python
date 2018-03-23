@@ -7,4 +7,3 @@ headers = {"Content-Type": "application/json"}
 r = requests.post(url, json=payload, headers=headers)
 
 print(json.loads(r.text)["error"]["code"])
-
